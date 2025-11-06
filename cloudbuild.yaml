@@ -18,7 +18,7 @@ steps:
     args:
       ["push", "europe-west1-docker.pkg.dev/${_PROJECT}/${_REPO}/${_SERVICE}:$SHORT_SHA"]
 
-  # 3️⃣ Deploy to Cloud Run
+  ## 3️⃣ Deploy to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     args:
       ["run", "deploy", "${_SERVICE}",
